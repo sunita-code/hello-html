@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body style="margin:30px 30px;">
+<h1> Tables </h1>
+<h3> Click button to view the table </h3>
+<button id = "1" onclick="displayTable(1, 'table of 1')"> 1 </button> <p id = "table of 1"></p>
+<button id = "2" onclick="displayTable(2, 'table of 2')"> 2 </button> <p id = "table of 2"></p>
+<button id = "3" onclick="displayTable(3, 'table of 3')"> 3 </button> <p id = "table of 3"></p>
+<button id = "4" onclick="displayTable(4, 'table of 4')"> 4 </button> <p id = "table of 4"></p>
+<button id = "5" onclick="displayTable(5, 'table of 5')"> 5 </button> <p id = "table of 5"></p>
+<button id = "6" onclick="displayTable(6, 'table of 6')"> 6 </button> <p id = "table of 6"></p>
+<button id = "7" onclick="displayTable(7, 'table of 7')"> 7 </button> <p id = "table of 7"></p>
+<button id = "8" onclick="displayTable(8, 'table of 8')"> 8 </button> <p id = "table of 8"></p>
+<button id = "9" onclick="displayTable(9, 'table of 9')"> 9 </button> <p id = "table of 9"></p>
+<button id = "10" onclick="displayTable(10, 'table of 10')"> 10 </button> <p id = "table of 10"> </p>
+</body>
+<script type="text/javascript">
+    function tableOf(n) {
+        var arr = [];
+        for(var i=1; i<=10;i++)
+            arr.push(n * i);
+        return arr;
+    }
+    function displayTable(i, elem) {
+    	if(document.getElementById(elem).innerHTML == "")
+        	document.getElementById(elem).innerHTML = tableOf(i);
+        else
+        	document.getElementById(elem).innerHTML = "";
+    }
+</script>
+</html>
