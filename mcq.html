@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function getOption() {
+  var obj = document.getElementById("choose correct");
+  document.getElementById("demo").innerHTML = 
+  obj.options[obj.selectedIndex].text;
+}
+
+function showAnswers() {
+	document.getElementById("damo").innerHTML ="Rowlatt Act";
+	
+    }
+</script>
+</head>
+<body>
+	<p> Q2 Which act Gandhiji called  as Black Act? </p>
+	<p> click and slect correct option</p>
+<form>
+<select id="choose correct">
+	<option>Jalliawala Bagh </option>
+	<option>Corruption</option>
+	<option >Rowlatt Act</option>
+	<option>Champaran Act</option>
+</select>
+<br><br>
+<input type="button" onclick="getOption()" value="Click Me!">
+</form>
+
+<p id="demo"></p>
+<button type="button" onclick="showAnswers()">Show answers!</button>
+	
+	<p id="damo"></p>
+
+</body>
+</html>
