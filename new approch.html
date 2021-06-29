@@ -4,72 +4,73 @@
 <head>
 </head>
 <body>
-<h1>  Q1 who is the president of India?</h1>
-
+	<h1>  Q1 who is the president of India?</h1>
 	
 	<input  type="radio" name="option" id="q1" value="NarendraModi">
-	 Narendra Modi</br>
-	<input  type="radio" name="option" id="q2" value="RamnathKovind">
-	 Ramnath Kovind</br>
-	<input type="radio" name="option" id="q3"  value="Amitshah">
-	 Amit Shah</br></br>
-	  <button onclick = "displayAnswer()">Submit</button><br>
+Narendra Modi</br>
+<input  type="radio" name="option" id="q2" value="RamnathKovind">
+Ramnath Kovind</br>
+<input type="radio" name="option" id="q3"  value="Amitshah">
+Amit Shah</br></br>
+<button onclick = "displayAnswer()">click</button><br>
+
+<h1> Q2 What is the fullform of HTML?</h1>
+<input  type="radio" name="option" id="A1" value="Hyper Text Markup Language">
+Hyper Text Markup Language</br>
+<input  type="radio" name="option" id="A2" value="hyper">
+Hyper Test Markup Language</br>	 
+<input  type="radio" name="option" id="A3" value="hyper">
+Home Tool Markup Language</br></br>
+<button onclick = "showAnswer()">click</button><br>
+<h3 id="result" style="color: green"></h3>	
+<h3 id="correct" style ="background-color:yellow;color: red ;width: 200px"></h3>
+</body>
+<script>
+	function  displayAnswer() {
+		if(document.getElementById('q1').checked) {
+			document.getElementById("result").innerHTML
+		}
+		if(document.getElementById('q3').checked) {
+			document.getElementById("result").innerHTML
+		}
+		if(document.getElementById('q2').checked) {
+			document.getElementById("result").innerHTML
+			= "your answer is correct";
+		}
+		else {document.getElementById('result').innerHTML
+			= "Your answer is wrong";
+		document.getElementById("correct").innerHTML
+		= document.getElementById("q2").value
+		+"   is  correct  answer";
+	}
+
+}
+function  showAnswer() {
+	if(document.getElementById('A2').checked) {
+		document.getElementById("result").innerHTML
+	}
+	if(document.getElementById('A3').checked) {
+		document.getElementById("result").innerHTML
+	}
+	if(document.getElementById('A1').checked) {
+		document.getElementById("result").innerHTML
+		= "your answer is correct";
+	}
+	else {document.getElementById('result').innerHTML
+		= "Your answer is wrong";
+	document.getElementById("correct").innerHTML
+	= document.getElementById("A1").value
+	+"   is  correct  answer";
+}
+
+}	
 
 
-	 <h1> Q2 What is the fullform of HTML?</h1>
-
-	 <input  type="radio" name="option" id="A1" value="hyper">
-	 Hyper Text Markup Language</br>
-	 <input  type="radio" name="option" id="A2" value="hyper">
-
-	Hyper Test Markup Language</br>	 
-	 <input  type="radio" name="option" id="A3" value="hyper">
-	 Home Tool Markup Language</br></br>
-	  <button onclick = "displayAnswer()">click</button><br>
 
 
-	 
-	 	<h3 id="result" style="color: green"></h3>	
-	 	<h3 id="correct" style ="background-color:yellow;color: red ;width: 200px"></h3>
-	 	<h4 id ="none"></h4>
-	 </body>
-	 	<script>
-	 		function  displayAnswer() {
-	 			if(document.getElementById('q1').checked) {
-	 				document.getElementById("result").innerHTML
-	 				 //= document.getElementById("q1").value;
-	 			}
-	 			//else if(document.getElementById('q2').checked) {
-	 				//document.getElementById("result").innerHTML
-	 				//= document.getElementById("q2").value;
-	 			///}
-	 			else if(document.getElementById('q3').checked) {
-	 				document.getElementById("result").innerHTML
-	 				// = document.getElementById("q3").value;
-	 			}
-	 			else {document.getElementById('none').innerHTML
-	 			=""; 
-	 			}
-	 			 if(document.getElementById('q2').checked) {
-	 				document.getElementById("result").innerHTML
-	 				 = true;
-	 			}
-	 		else {document.getElementById('result').innerHTML
-	 			= false;
-	 			document.getElementById("correct").innerHTML
-	 				 = document.getElementById("q2").value
-	 				 +"   is  correct  answer";
-	 		
-	 		}
-			 	
-			 }	
-			 
 
 
-	 
-	 	
-	 	</script>
-	 		
-	 	
-	 	</html>
-	
+</script>
+
+
+</html>
