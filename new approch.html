@@ -4,6 +4,7 @@
 <head>
 </head>
 <body>
+	
 	<h1>  Q1 who is the president of India?</h1>
 	
 	<input  type="radio" name="option" id="q1" value="NarendraModi">
@@ -13,7 +14,8 @@ Ramnath Kovind</br>
 <input type="radio" name="option" id="q3"  value="Amitshah">
 Amit Shah</br></br>
 <button onclick = "displayAnswer()">click</button><br>
-
+<h3 id="result" style="color: green"></h3>	
+<h3 id="correct" style ="background-color:yellow;color: red ;width: 200px"></h3>
 <h1> Q2 What is the fullform of HTML?</h1>
 <input  type="radio" name="option" id="A1" value="Hyper Text Markup Language">
 Hyper Text Markup Language</br>
@@ -22,9 +24,8 @@ Hyper Test Markup Language</br>
 <input  type="radio" name="option" id="A3" value="hyper">
 Home Tool Markup Language</br></br>
 <button onclick = "showAnswer()">click</button><br>
-<h3 id="result" style="color: green"></h3>	
-<h3 id="correct" style ="background-color:yellow;color: red ;width: 200px"></h3>
-</body>
+
+
 <script>
 	function  displayAnswer() {
 		if(document.getElementById('q1').checked) {
@@ -45,23 +46,23 @@ Home Tool Markup Language</br></br>
 	}
 
 }
-function  showAnswer() {
-	if(document.getElementById('A2').checked) {
-		document.getElementById("result").innerHTML
+	function  showAnswer() {
+		if(document.getElementById('A2').checked) {
+			document.getElementById("elem").innerHTML
+		}
+		if(document.getElementById('A3').checked) {
+			document.getElementById("elem").innerHTML
+		}
+		if(document.getElementById('A1').checked) {
+			document.getElementById("elem").innerHTML
+			= "your answer is correct";
+		}
+		else {document.getElementById('elem').innerHTML
+			= "Your answer is wrong";
+		document.getElementById("red").innerHTML
+		= document.getElementById("A1").value
+		+"   is  correct  answer";
 	}
-	if(document.getElementById('A3').checked) {
-		document.getElementById("result").innerHTML
-	}
-	if(document.getElementById('A1').checked) {
-		document.getElementById("result").innerHTML
-		= "your answer is correct";
-	}
-	else {document.getElementById('result').innerHTML
-		= "Your answer is wrong";
-	document.getElementById("correct").innerHTML
-	= document.getElementById("A1").value
-	+"   is  correct  answer";
-}
 
 }	
 
@@ -71,6 +72,11 @@ function  showAnswer() {
 
 
 </script>
+
+<p id="elem"></p>
+<h3 id="red"></h3>
+
+</body>
 
 
 </html>
