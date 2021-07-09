@@ -2,37 +2,37 @@
 <!DOCTYPE html>
 <html>
 <body>
-<form>
-First name:<br>
-<input type="text" name="firstname"  value=""><br>
-Last name:<br>
-<input type="text" name="lastname"  value=""><br>
-<input type="date" name="bday"><br>
-E-mail:<br>
-<input type="email" name="email">
-<h1 style ="text-align:center;color: red">Check Answers</h1>
-</form>
+	<form>
+		First name:<br>
+		<input type="text" name="firstname"  value=""><br>
+		Last name:<br>
+		<input type="text" name="lastname"  value=""><br>
+		<input type="date" name="day"><br>
+		E-mail:<br>
+		<input type="email" name="email">
+		<h1 style ="text-align:center;color: red">General Knowledge Quiz</h1>
+	</form>
 	
 
-<h1> Q1- Which is the safest cheque?</h1>
-<input type="radio" id="q1A1" name="q1" value="cheque">Bearer<br>
-<input type="radio" id="q1A2" name="q1" value="cheque">Order<br>
-<input type="radio" id="q1A3" name="q1" value="cross cheque">Cross<br>
-<input type="radio" id="q1A4" name="q1" value="cheque">Self<br>
-	<button onclick="displayAnswer1()">click</button>
+	<h1> Q1- Which is the safest cheque?</h1>														
+	<input type="radio" id="q1A1" name="q1" value="cheque">Bearer<br>
+	<input type="radio" id="q1A2" name="q1" value="cheque">Order<br>
+	<input type="radio" id="q1A3" name="q1" value="cross cheque">Cross<br>
+	<input type="radio" id="q1A4" name="q1" value="cheque">Self<br>
+	<button onclick="displayAnswer1()">Check</button>
 
-<script>
-	function displayAnswer1() {
-		if(document.getElementById('q1A3').checked) {
-			document.getElementById('ans1').innerHTML
-			= "your answer is correct";
+	<script>
+		function displayAnswer1() {
+			if(document.getElementById('q1A3').checked) {
+				document.getElementById('ans1').innerHTML
+				= "your answer is correct";
+			}
+			else {document.getElementById('ans1').innerHTML
+				= "Your answer is wrong";
+			document.getElementById("correct1").innerHTML
+			= document.getElementById("q1A3").value
+			+"   is  correct  answer";
 		}
-		else {document.getElementById('ans1').innerHTML
-			= "Your answer is wrong";
-		document.getElementById("correct1").innerHTML
-		= document.getElementById("q1A3").value
-		+"   is  correct  answer";
-	}
 	}
 </script>
 <h3 id="ans1" style="color: red"></h3>	
@@ -42,7 +42,7 @@ E-mail:<br>
 <input type="radio" id="q2A2" name="q2" value="Actor">Scientist<br>
 <input type="radio" id="q2A3" name="q2" value="Actor">Actor<br>
 <input type="radio" id="q2A4" name="q2" value="Actor">Doctor<br>
-<button onclick="displayAnswer2()">click</button>
+<button onclick="displayAnswer2()">Check</button>
 <script>
 	function displayAnswer2() {
 		if(document.getElementById('q2A1').checked) {
@@ -55,7 +55,7 @@ E-mail:<br>
 		= document.getElementById("q2A1").value
 		+"   is  correct  answer";
 	}
-	}
+}
 </script>
 <h3 id="ans2" style="color: red"></h3>	
 <h3 id="correct2" style ="background-color:yellow;color: blue ;width: 200px"></h3>
@@ -64,7 +64,7 @@ E-mail:<br>
 <input type="radio" id="q3A2" name="q3" value="Author">Aravind Adiga<br>
 <input type="radio" id="q3A3" name="q3" value="Author">Victor Hugo <br>
 <input type="radio" id="q3A4" name="q3" value="Arundhati Roy">Arundhati Roy<br>
-<button onclick="displayAnswer3()">click</button>
+<button onclick="displayAnswer3()">Check</button>
 <script>
 	function displayAnswer3() {
 		if(document.getElementById('q3A4').checked) {
@@ -77,7 +77,7 @@ E-mail:<br>
 		= document.getElementById("q3A4").value
 		+"   is  correct  answer";
 	}
-	}
+}
 </script>
 <h3 id="ans3" style="color: red"></h3>	
 <h3 id="correct3" style ="background-color:yellow;color: blue ;width: 200px"></h3>
@@ -86,7 +86,7 @@ E-mail:<br>
 <input type="radio" id="q4A2" name="q4" value="Train">Train Driver<br>
 <input type="radio" id="q4A3" name="q4" value="Locopilot">Locopilot<br>
 <input type="radio" id="q4A4" name="q4" value="Train">Captain<br>
-<button onclick="displayAnswer4()">click</button>
+<button onclick="displayAnswer4()">Check</button>
 
 <script>
 	function displayAnswer4() {
@@ -100,7 +100,7 @@ E-mail:<br>
 		= document.getElementById("q4A3").value
 		+"   is  correct  answer";
 	}
-	}
+}
 </script>
 
 <h3 id="ans4" style="color: red"></h3>	
@@ -110,7 +110,7 @@ E-mail:<br>
 <input type="radio" id="q5A2" name="q5" value="June 24">June 24<br>
 <input type="radio" id="q5A3" name="q5" value="Day">October 21<br>
 <input type="radio" id="q5A4" name="q5" value="Day">June 21<br>
-<button onclick="displayAnswer5()">click</button>
+<button onclick="displayAnswer5()">Check</button>
 
 <script>
 	function displayAnswer5() {
@@ -124,7 +124,7 @@ E-mail:<br>
 		= document.getElementById("q5A1").value
 		+"   is  correct  answer";
 	}
-	}
+}
 </script>
 
 <h3 id="ans5" style="color: red"></h3>	
@@ -135,7 +135,7 @@ E-mail:<br>
 <input type="radio" id="q6A2" name="q6" value="capital">Rome<br>
 <input type="radio" id="q6A3" name="q6" value="capital">Prague<br>
 <input type="radio" id="q6A4" name="q6" value="Lima">Lima<br>
-<button onclick="displayAnswer6()">click</button>
+<button onclick="displayAnswer6()">Check</button>
 
 <script>
 	function displayAnswer6() {
@@ -149,18 +149,18 @@ E-mail:<br>
 		= document.getElementById("q6A4").value
 		+"   is  correct  answer";
 	}
-	}
+}
 </script>
 
 <h3 id="ans6" style="color: red"></h3>	
 <h3 id="correct6" style ="background-color:yellow;color: blue ;width: 200px"></h3>
-<h1> Q7- What is the person who complies a dictionary called? </h1>
+<h1> Q7- What ish the person who complies a dictionary called? </h1>
 
 <input type="radio" id="q7A1" name="q7" value="person">Editor<br>
 <input type="radio" id="q7A2" name="q7" value="Lexicogreypher">Lexicogreypher<br>
 <input type="radio" id="q7A3" name="q7" value="person">Complier<br>
 <input type="radio" id="q7A4" name="q7" value="person">Director<br>
-<button onclick="displayAnswer7()">click</button>
+<button onclick="displayAnswer7()">Check</button>
 
 <script>
 	function displayAnswer7() {
@@ -174,7 +174,7 @@ E-mail:<br>
 		= document.getElementById("q7A2").value
 		+"   is  correct  answer";
 	}
-	}
+}
 </script>
 
 <h3 id="ans7" style="color: red"></h3>	
@@ -184,7 +184,7 @@ E-mail:<br>
 <input type="radio" id="q8A2" name="q8" value="continent">Asia<br>
 <input type="radio" id="q8A3" name="q8" value="continent">Saudhi Arabia<br>
 <input type="radio" id="q8A4" name="q8" value="Africa">Africa<br>
-<button onclick="displayAnswer8()">click</button>
+<button onclick="displayAnswer8()">Check</button>
 
 <script>
 	function displayAnswer8() {
@@ -198,7 +198,7 @@ E-mail:<br>
 		= document.getElementById("q8A4").value
 		+"   is  correct  answer";
 	}
-	}
+}
 </script>
 
 <h3 id="ans8" style="color: red"></h3>
@@ -209,7 +209,7 @@ E-mail:<br>
 <input type="radio" id="q9A2" name="q9" value="25">27<br>
 <input type="radio" id="q9A3" name="q9" value="29">29<br>
 <input type="radio" id="q9A4" name="q9" value="25">30<br>
-<button onclick="displayAnswer9()">click</button>
+<button onclick="displayAnswer9()">Check</button>
 
 <script>
 	function displayAnswer9() {
@@ -223,7 +223,7 @@ E-mail:<br>
 		= document.getElementById("q9A3").value
 		+"   is  correct  answer";
 	}
-	}
+}
 </script>
 
 <h3 id="ans9" style="color: red"></h3>	
@@ -233,7 +233,7 @@ E-mail:<br>
 <input type="radio" id="q10A2" name="q10" value="language">English<br>
 <input type="radio" id="q10A3" name="q10" value="language">French<br>
 <input type="radio" id="q10A4" name="q10" value="language">German<br>
-<button onclick="displayAnswer10()">click</button>
+<button onclick="displayAnswer10()">Check</button>
 
 <script>
 	function displayAnswer10() {
@@ -247,7 +247,7 @@ E-mail:<br>
 		= document.getElementById("q10A1").value
 		+"   is  correct  answer";
 	}
-	}
+}
 </script>
 
 <h3 id="ans10" style="color: red"></h3>	
@@ -272,8 +272,8 @@ E-mail:<br>
 
 
 
-		
-	
+
+
 
 </body>
 </html> 
