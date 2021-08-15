@@ -4,7 +4,8 @@
 </head>
 <body style="margin:30px 30px;">
 	<h1> Tables </h1>
-	<button  id ="table" onclick="myFunction()">click it</button>
+
+	<button  id="11" onclick="addFunction()">click</button>
 	<h3> Click button to view the table </h3>
 	<button id = "1" onclick="toggleTable(1, 'table of 1')"> 1 </button> <p id = "table of 1"></p>
 	<button id = "2" onclick="toggleTable(2, 'table of 2')"> 2 </button> <p id = "table of 2"></p>
@@ -38,13 +39,33 @@
 		} 
 	}
 
-	function myFunction() {
-		var tag =document.createElement("table");
-		var text =document.createTextNode(tableOf(11));
-		tag.appendChild(text);
-		document.getElementById("table of 10")
-		.appendChild(tag);
-	}	
+	function addFunction() {
+		var btn =document.createElement('button');
+		var att = document.createAttribute("onclick");
+		btn.setAttribute ("onclick","toggleTable(11,'table of 11')");
+		btn.innerHTML =11;
+		document.body.appendChild(btn);
+	}
+	
+
+	function fun_color() {
+		var elem = document.getElementById("button");
+		elem.setAttribute("style","background:yellow");
+	}
+
+	
+	
+
+
+	
+	
+
+
+
+
+
+
+
 
     	//if table is not visible then we have to show it
 				//else hide it
@@ -70,5 +91,13 @@
 
 
     		</script>
+    		<button id="button" onclick="fun_color()" style="background: blue">try</button>
+    		
+    		<p id="table of 11"></p>
+
+
+    		
+
+
     	</body>
     	</html>
