@@ -4,8 +4,10 @@
 </head>
 <body style="margin:30px 30px;">
 	<h1> Tables </h1>
+	
 
-	<button  id="11" onclick="addFunction()">click</button>
+	
+	<button onclick="addTable()">clicK</button>
 	<h3> Click button to view the table </h3>
 	<button id = "1" onclick="toggleTable(1, 'table of 1')"> 1 </button> <p id = "table of 1"></p>
 	<button id = "2" onclick="toggleTable(2, 'table of 2')"> 2 </button> <p id = "table of 2"></p>
@@ -17,6 +19,12 @@
 	<button id = "8" onclick="toggleTable(8, 'table of 8')"> 8 </button> <p id = "table of 8"></p>
 	<button id = "9" onclick="toggleTable(9, 'table of 9')"> 9 </button> <p id = "table of 9"></p>
 	<button id = "10" onclick="toggleTable(10, 'table of 10')"> 10 </button> <p id = "table of 10"></p>
+	<input type="text"  id="element" value="Enter Number">
+	
+
+	
+
+	
 </body>
 <script type="text/javascript">
 	function tableOf(n) {
@@ -39,19 +47,43 @@
 		} 
 	}
 
-	function addFunction() {
-		var btn =document.createElement('button');
-		var att = document.createAttribute("onclick");
-		btn.setAttribute ("onclick","toggleTable(11,'table of 11')");
-		btn.innerHTML =11;
-		document.body.appendChild(btn);
-	}
-	
 
 	function fun_color() {
 		var elem = document.getElementById("button");
 		elem.setAttribute("style","background:yellow");
 	}
+
+	//create button,set id to 11,set onclick , set innerHTMl =11,create p,set id =table of 11
+	function addTable() {
+		var btn = document.createElement("button");
+		btn.setAttribute("id",'11');
+		btn.setAttribute("onclick","toggleTable(11,'table of 11')");
+		btn.innerHTML = 11;
+		var p = document.createElement("p");
+		p.setAttribute("id",'table of 11');
+		document.body.appendChild(btn);
+		document.body.appendChild(p);
+
+
+	}
+
+	function createTable() {
+		var btn = document.createElement("button");//create button giving attribute name & value
+		btn.setAttribute("id",'ABC');
+		var inputvalue = document.getElementById("element").value;//insert number in the button
+		btn.innerHTML = inputvalue;//where to display
+		var p = document.createElement("p");
+		p.setAttribute("id",inputvalue);	
+		btn.setAttribute("onclick","toggleTable("+ inputvalue +", "+ inputvalue +")");
+
+		
+		document.body.appendChild(btn);
+		document.body.appendChild(p);
+
+
+	}
+
+
 
 	
 	
@@ -91,12 +123,17 @@
 
 
     		</script>
+    		<p> Enter Number of that you want to see the table then click the button</p>
+    		<button  onclick="createTable()">Add Table</button>
+
+
     		<button id="button" onclick="fun_color()" style="background: blue">try</button>
     		
-    		<p id="table of 11"></p>
-
-
+    		    		
     		
+
+
+
 
 
     	</body>
