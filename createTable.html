@@ -1,0 +1,55 @@
+<html>
+
+<body style="margin:30px 30px;background-color: skyblue">
+	<script type="text/javascript">
+		function tableOf(n) {
+			var arr = [];
+			for(var i=1; i<=10;i++)
+				arr.push(n * i);
+			return arr;
+		}
+		function displayTable(i, elem) {
+			document.getElementById(elem).innerHTML = tableOf(i);
+		}
+		function hideTable(elem) {
+			document.getElementById(elem).innerHTML = "";
+		}
+		function toggleTable(i,elem) {
+			if(document.getElementById(elem).innerHTML=="") {
+				displayTable(i,elem);
+			} else {
+				hideTable(elem);
+			} 
+		}
+	</script>
+	
+	
+	<h1 style="background-color: blue;color: red;width: 150px">TABLES</h1>
+	<p> To add the table type the number then click Add Table</p>
+
+
+
+	
+	<input type="text"  id="element" value="">
+	
+	<button  onclick="createTable()">Add Table</button><br>
+
+	<script>
+		function createTable() {
+			var btn = document.createElement("button");
+			btn.setAttribute("id",'ABC');
+			var inputvalue = document.getElementById("element").value;
+			btn.innerHTML = inputvalue;
+			var p = document.createElement("p");
+			p.setAttribute("id",inputvalue);	
+			btn.setAttribute("onclick","toggleTable("+ inputvalue +", "+ inputvalue +")");
+			document.body.appendChild(btn);
+			document.body.appendChild(p);
+
+
+		}
+
+		
+	</script>
+</body>
+</html>
